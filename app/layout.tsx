@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -14,9 +14,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'RR Studio Barbería | Estilo Masculino & Formación Profesional',
-  description: 'RR Studio Barbería es un espacio dedicado al estilo masculino, donde cada corte se trabaja con precisión, técnica y atención al detalle. Especialistas en fades, cortes modernos, barba y formación profesional en barbería.',
+  title: 'RR Studio Barbería | Cortes Profesionales & Barbería en [Tu Ciudad]',
+  description: 'RR Studio Barbería es un espacio dedicado al estilo masculino. Especialistas en fades, cortes modernos, arreglo de barba, decoloración y domicilios personalizados. Membresía VIP disponible.',
+  keywords: 'barbería, cortes de cabello, fades, arreglo de barba, servicios de barbería, domicilios, barbero profesional',
+  metadataBase: new URL('https://rrstudiobarberia.com'),
+  openGraph: {
+    title: 'RR Studio Barbería | Cortes Profesionales',
+    description: 'Espacio dedicado al estilo masculino con servicios premium de barbería',
+    url: 'https://rrstudiobarbería.com',
+    type: 'website',
+    images: [{
+      url: '/hero-bg.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'RR Studio Barbería',
+    }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  applicationName: 'RR Studio Barbería',
+  authors: [{ name: 'RR Studio Barbería' }],
   generator: 'v0.app',
+  creator: 'RR Studio Barbería',
   icons: {
     icon: [
       {
@@ -36,6 +57,17 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#C9A45C' },
+    { media: '(prefers-color-scheme: dark)', color: '#C9A45C' },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,3 +82,4 @@ export default function RootLayout({
     </html>
   )
 }
+

@@ -5,6 +5,9 @@ import { Culture } from "@/components/culture"
 import { Services } from "@/components/services"
 import { Ritual } from "@/components/ritual"
 import { Works } from "@/components/works"
+import { ExclusivityClub } from "@/components/exclusivity-club"
+import { HomeServiceSection } from "@/components/home-service"
+import { ProductsSection } from "@/components/products-section"
 import { Academy } from "@/components/academy"
 import { Testimonials } from "@/components/testimonials"
 import { About } from "@/components/about"
@@ -24,6 +27,9 @@ export default function Home() {
       <Services />
       <Ritual />
       <Works />
+      <ExclusivityClub />
+      <HomeServiceSection />
+      <ProductsSection />
       <Academy />
       <Testimonials />
       <About />
