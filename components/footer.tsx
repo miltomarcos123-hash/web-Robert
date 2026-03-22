@@ -42,13 +42,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-primary">Links rápidos</h4>
+            <h4 className="font-semibold mb-6 text-[#F5F5F5]">Links rápidos</h4>
             <nav className="flex flex-col gap-3">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="text-[#F5F5F5] hover:text-[#C9A45C] transition-colors duration-300 text-sm"
                 >
                   {link.label}
                 </Link>
