@@ -3,11 +3,11 @@ import { Instagram } from "lucide-react"
 import { RRLogo } from "@/components/rr-logo"
 
 const quickLinks = [
-  { href: "/", label: "Inicio" },
-  { href: "/servicios", label: "Servicios" },
-  { href: "/academia", label: "Academia" },
-  { href: "/productos", label: "Productos" },
-  { href: "/nosotros", label: "Nosotros" },
+  { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#academia", label: "Academia" },
+  { href: "#trabajos", label: "Trabajos" },
+  { href: "#contacto", label: "Contacto" },
 ]
 
 function TikTokIcon({ className }: { className?: string }) {
@@ -42,13 +42,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6 text-[#F5F5F5]">Links rápidos</h4>
-            <nav className="flex flex-wrap gap-4">
+            <h4 className="font-semibold mb-4 text-primary">Links rápidos</h4>
+            <nav className="flex flex-col gap-3">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[#F5F5F5] hover:text-[#C9A45C] transition-colors duration-300 text-sm"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
