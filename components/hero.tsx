@@ -18,10 +18,10 @@ export function Hero() {
           priority
         />
         {/* Dark overlay for brand consistency - Brandbook */}
-        <div className="absolute inset-0 bg-[#141414]/85" />
+        <div className="absolute inset-0 bg-[#071F15]/85" />
         
         {/* Cinematic overlay accent with green */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#627435]/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0F5A33]/10" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -35,7 +35,7 @@ export function Hero() {
             Peluquería & Barbería
           </p>
           
-          <p className="text-[#C5A66B] italic font-serif text-xl md:text-2xl mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <p className="text-[#D8B97A] italic font-serif text-xl md:text-2xl mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             Más Que Un Corte
           </p>
           
@@ -43,12 +43,12 @@ export function Hero() {
             <span className="text-primary">BARBERÍA</span>
           </h1>
           
-          <p className="text-[#F7F7F7]/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-pretty animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-[#F5F5F5]/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-pretty animate-fade-in" style={{ animationDelay: '0.5s' }}>
             RR Estudio es un espacio dedicado al estilo masculino, donde cada corte se trabaja con precisión, técnica y atención al detalle.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-center mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" asChild className="text-base px-6 bg-[#C5A66B] hover:bg-[#D8B97A] text-[#141414] transition-all duration-300 hover:scale-105 font-semibold">
+            <Button size="lg" asChild className="text-base px-6 bg-[#C9A45C] hover:bg-[#D8B97A] text-[#071F15] transition-all duration-300 hover:scale-105 font-semibold">
               <a 
                 href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
                 target="_blank"

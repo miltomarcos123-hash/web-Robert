@@ -29,7 +29,7 @@ const MAPS_URL = "https://www.google.com/maps/dir/-31.6407808,-60.6994432/Rivada
 
 export function Footer() {
   return (
-    <footer className="py-16 border-t border-border/50 bg-[#141414]">
+    <footer className="py-16 border-t border-border/50 bg-[#071F15]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>

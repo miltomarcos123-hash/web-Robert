@@ -17,7 +17,7 @@ export function CTA() {
             <Button 
               size="lg" 
               asChild 
-              className="text-base px-8 bg-[#141414] hover:bg-[#627435] text-[#F7F7F7] transition-colors duration-300"
+              className="text-base px-8 bg-secondary hover:bg-[#0B3D26] text-[#F5F5F5] transition-colors duration-300"
             >
               <a 
                 href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"

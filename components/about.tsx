@@ -14,7 +14,7 @@ export function About() {
                 className="object-cover"
               />
               {/* Subtle green overlay to match brand - Brandbook */}
-              <div className="absolute inset-0 bg-[#627435]/20 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[#0F5A33]/20 mix-blend-multiply" />
             </div>
 
             <div>

@@ -4,78 +4,77 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Brandbook RR Studio - Colores Corporativos Oficiales */
-/* Dorado: #C5A66B | Verde: #627435 | Negro: #141414 | Blanco: #FFFFFF */
-/* Grises: #EDEDED (claro) | #acacac (medio) | #999999 (oscuro) */
+/* Verde oscuro: #071F15 | Verde secundario: #0F5A33 | Dorado: #C9A45C | Texto: #F5F5F5 */
 
 :root {
-  --background: #141414;
-  --foreground: #F7F7F7;
-  --card: #1a1a1a;
-  --card-foreground: #F7F7F7;
-  --popover: #1a1a1a;
-  --popover-foreground: #F7F7F7;
-  --primary: #C5A66B;
-  --primary-foreground: #141414;
-  --secondary: #627435;
-  --secondary-foreground: #F7F7F7;
-  --muted: #2a2a2a;
-  --muted-foreground: #acacac;
-  --accent: #627435;
-  --accent-foreground: #F7F7F7;
+  --background: #071F15;
+  --foreground: #F5F5F5;
+  --card: #0B3D26;
+  --card-foreground: #F5F5F5;
+  --popover: #0B3D26;
+  --popover-foreground: #F5F5F5;
+  --primary: #C9A45C;
+  --primary-foreground: #071F15;
+  --secondary: #0F5A33;
+  --secondary-foreground: #F5F5F5;
+  --muted: #0F5A33;
+  --muted-foreground: #9CA3AF;
+  --accent: #D8B97A;
+  --accent-foreground: #071F15;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #333333;
-  --input: #1a1a1a;
-  --ring: #C5A66B;
-  --chart-1: #C5A66B;
-  --chart-2: #627435;
-  --chart-3: #acacac;
-  --chart-4: #999999;
-  --chart-5: #141414;
+  --border: #0F5A33;
+  --input: #0B3D26;
+  --ring: #C9A45C;
+  --chart-1: #C9A45C;
+  --chart-2: #D8B97A;
+  --chart-3: #0F5A33;
+  --chart-4: #0B3D26;
+  --chart-5: #071F15;
   --radius: 0.5rem;
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #F7F7F7;
-  --sidebar-primary: #C5A66B;
-  --sidebar-primary-foreground: #141414;
-  --sidebar-accent: #627435;
-  --sidebar-accent-foreground: #F7F7F7;
-  --sidebar-border: #333333;
-  --sidebar-ring: #C5A66B;
+  --sidebar: #0B3D26;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-primary: #C9A45C;
+  --sidebar-primary-foreground: #071F15;
+  --sidebar-accent: #0F5A33;
+  --sidebar-accent-foreground: #F5F5F5;
+  --sidebar-border: #0F5A33;
+  --sidebar-ring: #C9A45C;
 }
 
 .dark {
-  --background: #141414;
-  --foreground: #F7F7F7;
-  --card: #1a1a1a;
-  --card-foreground: #F7F7F7;
-  --popover: #1a1a1a;
-  --popover-foreground: #F7F7F7;
-  --primary: #C5A66B;
-  --primary-foreground: #141414;
-  --secondary: #627435;
-  --secondary-foreground: #F7F7F7;
-  --muted: #2a2a2a;
-  --muted-foreground: #acacac;
-  --accent: #627435;
-  --accent-foreground: #F7F7F7;
+  --background: #071F15;
+  --foreground: #F5F5F5;
+  --card: #0B3D26;
+  --card-foreground: #F5F5F5;
+  --popover: #0B3D26;
+  --popover-foreground: #F5F5F5;
+  --primary: #C9A45C;
+  --primary-foreground: #071F15;
+  --secondary: #0F5A33;
+  --secondary-foreground: #F5F5F5;
+  --muted: #0F5A33;
+  --muted-foreground: #9CA3AF;
+  --accent: #D8B97A;
+  --accent-foreground: #071F15;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #333333;
-  --input: #1a1a1a;
-  --ring: #C5A66B;
-  --chart-1: #C5A66B;
-  --chart-2: #627435;
-  --chart-3: #acacac;
-  --chart-4: #999999;
-  --chart-5: #141414;
-  --sidebar: #1a1a1a;
-  --sidebar-foreground: #F7F7F7;
-  --sidebar-primary: #C5A66B;
-  --sidebar-primary-foreground: #141414;
-  --sidebar-accent: #627435;
-  --sidebar-accent-foreground: #F7F7F7;
-  --sidebar-border: #333333;
-  --sidebar-ring: #C5A66B;
+  --border: #0F5A33;
+  --input: #0B3D26;
+  --ring: #C9A45C;
+  --chart-1: #C9A45C;
+  --chart-2: #D8B97A;
+  --chart-3: #0F5A33;
+  --chart-4: #0B3D26;
+  --chart-5: #071F15;
+  --sidebar: #0B3D26;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-primary: #C9A45C;
+  --sidebar-primary-foreground: #071F15;
+  --sidebar-accent: #0F5A33;
+  --sidebar-accent-foreground: #F5F5F5;
+  --sidebar-border: #0F5A33;
+  --sidebar-ring: #C9A45C;
 }
 
 @theme inline {
