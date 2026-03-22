@@ -3,11 +3,11 @@ import { Instagram } from "lucide-react"
 import { RRLogo } from "@/components/rr-logo"
 
 const quickLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#academia", label: "Academia" },
-  { href: "#trabajos", label: "Trabajos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/", label: "Inicio" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/academia", label: "Academia" },
+  { href: "/productos", label: "Productos" },
+  { href: "/nosotros", label: "Nosotros" },
 ]
 
 function TikTokIcon({ className }: { className?: string }) {
