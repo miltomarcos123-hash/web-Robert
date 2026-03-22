@@ -43,7 +43,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold mb-6 text-[#F5F5F5]">Links rápidos</h4>
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flex-wrap gap-4">
               {quickLinks.map((link) => (
                 <Link
                   key={link.href}
