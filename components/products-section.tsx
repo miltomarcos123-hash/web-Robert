@@ -42,7 +42,7 @@ export function ProductsSection() {
             Tienda Exclusiva
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-balance">
-            Productos RR Studio
+            Productos Premium
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Descubre nuestra línea exclusiva de productos premium para el cuidado personal y estilismo masculino.

@@ -28,14 +28,14 @@ const zonas = [
 
 export function HomeServiceSection() {
   return (
-    <section id="domicilios" className="py-20 px-6 bg-background">
+    <section id="domicilio" className="py-20 px-6 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4 font-medium">
             Servicio Premium
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-balance">
-            Domicilios Personalizados
+            Servicios a Domicilio
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
             Llevamos nuestro profesionalismo a tu hogar. Servicio de barbería a domicilio con la misma calidad que en nuestro estudio.

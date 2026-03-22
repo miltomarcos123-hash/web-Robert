@@ -3,9 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 import { RRLogo } from "@/components/rr-logo"
-import { ContactModal } from "@/components/contact-modal"
 
 export function Hero() {
   return (
@@ -49,28 +47,34 @@ export function Hero() {
             RR Estudio es un espacio dedicado al estilo masculino, donde cada corte se trabaja con precisión, técnica y atención al detalle.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <Button size="lg" asChild className="text-base px-8 bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 justify-center mb-12 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <Button size="lg" asChild className="text-base px-6 bg-[#C5A66B] hover:bg-[#D8B97A] text-[#141414] transition-all duration-300 hover:scale-105 font-semibold">
               <a 
                 href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Reservar turno
-                <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
             
-            <ContactModal
-              trigger={
-                <Button size="lg" variant="outline" className="text-base px-8">
-                  Enviar Consulta
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              }
-              titulo="Cuéntanos tus necesidades"
-              descripcion="¿Qué estás buscando en RR Estudio?"
-            />
+            <Button size="lg" asChild variant="outline" className="text-base px-6">
+              <a href="#servicios">
+                Ver servicios
+              </a>
+            </Button>
+
+            <Button size="lg" asChild variant="outline" className="text-base px-6">
+              <a href="#cursos">
+                Ver cursos
+              </a>
+            </Button>
+
+            <Button size="lg" asChild variant="outline" className="text-base px-6">
+              <a href="#domicilio">
+                Servicios a domicilio
+              </a>
+            </Button>
           </div>
           
           {/* Address badge */}
