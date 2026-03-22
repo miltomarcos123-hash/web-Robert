@@ -24,11 +24,11 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <RRLogo size="sm" />
             <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
-                RR Studio
+              <span className="font-sans text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
+                RR Estudio
               </span>
-              <span className="text-[10px] text-primary uppercase tracking-[0.2em]">
-                Barbería
+              <span className="text-[10px] text-primary uppercase tracking-[0.15em]">
+                Peluquería y Barbería
               </span>
             </div>
           </Link>

@@ -19,11 +19,11 @@ export function Hero() {
           className="object-cover"
           priority
         />
-        {/* Dark green overlay for brand consistency */}
-        <div className="absolute inset-0 bg-[#071F15]/85" />
+        {/* Dark overlay for brand consistency - Brandbook */}
+        <div className="absolute inset-0 bg-[#141414]/85" />
         
-        {/* Cinematic overlay accent */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-primary/10" />
+        {/* Cinematic overlay accent with green */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#627435]/15" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -34,10 +34,10 @@ export function Hero() {
           </div>
           
           <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4 font-medium animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Corte & Barbería
+            Peluquería & Barbería
           </p>
           
-          <p className="text-[#D8B97A] italic font-serif text-xl md:text-2xl mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <p className="text-[#C5A66B] italic font-serif text-xl md:text-2xl mb-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             Más Que Un Corte
           </p>
           
@@ -45,14 +45,14 @@ export function Hero() {
             <span className="text-primary">BARBERÍA</span>
           </h1>
           
-          <p className="text-[#F5F5F5]/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-pretty animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            RR Studio Barbería es un espacio dedicado al estilo masculino, donde cada corte se trabaja con precisión, técnica y atención al detalle.
+          <p className="text-[#F7F7F7]/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-pretty animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            RR Estudio es un espacio dedicado al estilo masculino, donde cada corte se trabaja con precisión, técnica y atención al detalle.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Button size="lg" asChild className="text-base px-8 bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300">
               <a 
-                href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Studio%20Barber%C3%ADa"
+                href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,7 +69,7 @@ export function Hero() {
                 </Button>
               }
               titulo="Cuéntanos tus necesidades"
-              descripcion="¿Qué estás buscando en RR Studio?"
+              descripcion="¿Qué estás buscando en RR Estudio?"
             />
           </div>
           

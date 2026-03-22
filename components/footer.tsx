@@ -29,7 +29,7 @@ const MAPS_URL = "https://www.google.com/maps/dir/-31.6407808,-60.6994432/Rivada
 
 export function Footer() {
   return (
-    <footer className="py-16 border-t border-border/50 bg-[#071F15]">
+    <footer className="py-16 border-t border-border/50 bg-[#141414]">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
@@ -37,7 +37,7 @@ export function Footer() {
               <RRLogo size="md" showText />
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              Espacio dedicado al estilo masculino, la precisión en barbería y la formación profesional.
+              Espacio dedicado al estilo masculino, donde encontrarás exclusividad, elegancia y sofisticación.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border/50 text-center text-sm text-muted-foreground">
-          © 2026 RR Studio Barbería. Todos los derechos reservados.
+          © 2026 RR Estudio - Peluquería y Barbería. Todos los derechos reservados.
         </div>
       </div>
     </footer>

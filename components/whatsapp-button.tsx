@@ -16,7 +16,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 const WHATSAPP_NUMBER = "543425106652"
-const WHATSAPP_MESSAGE = encodeURIComponent("Hola, quiero reservar un turno en RR Studio Barbería.")
+const WHATSAPP_MESSAGE = encodeURIComponent("Hola, quiero reservar un turno en RR Estudio.")
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`
 
 export function WhatsAppButton() {
@@ -25,11 +25,11 @@ export function WhatsAppButton() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#0F5A33] hover:bg-[#0B3D26] rounded-full shadow-lg transition-all duration-300 hover:scale-110 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#627435] hover:bg-[#4a5a28] rounded-full shadow-lg transition-all duration-300 hover:scale-110 group"
       aria-label="Contactar por WhatsApp"
     >
       {/* Pulse animation */}
-      <span className="absolute inset-0 rounded-full bg-[#0F5A33] animate-ping opacity-30" />
+      <span className="absolute inset-0 rounded-full bg-[#627435] animate-ping opacity-30" />
       <WhatsAppIcon className="w-7 h-7 text-white relative z-10" />
     </Link>
   )

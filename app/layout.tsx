@@ -1,43 +1,47 @@
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Titillium_Web, Rubik } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const playfair = Playfair_Display({ 
+// Tipografía Principal - Brandbook RR Studio
+const titilliumWeb = Titillium_Web({ 
   subsets: ["latin"],
-  variable: '--font-serif'
-});
-
-const inter = Inter({ 
-  subsets: ["latin"],
+  weight: ['300', '400', '600', '700'],
   variable: '--font-sans'
 });
 
+// Tipografía Secundaria - Brandbook RR Studio
+const rubik = Rubik({ 
+  subsets: ["latin"],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-serif'
+});
+
 export const metadata: Metadata = {
-  title: 'RR Studio Barbería | Cortes Profesionales & Barbería en [Tu Ciudad]',
-  description: 'RR Studio Barbería es un espacio dedicado al estilo masculino. Especialistas en fades, cortes modernos, arreglo de barba, decoloración y domicilios personalizados. Membresía VIP disponible.',
-  keywords: 'barbería, cortes de cabello, fades, arreglo de barba, servicios de barbería, domicilios, barbero profesional',
-  metadataBase: new URL('https://rrstudiobarberia.com'),
+  title: 'RR Estudio | Peluquería y Barbería en Santa Fe',
+  description: 'RR Estudio es un espacio dedicado al estilo masculino. Exclusividad, elegancia y sofisticación. Especialistas en fades, cortes modernos, arreglo de barba y domicilios personalizados.',
+  keywords: 'barbería santa fe, peluquería masculina, cortes de cabello, fades, arreglo de barba, servicios de barbería, domicilios, barbero profesional, RR Estudio',
+  metadataBase: new URL('https://rrestudio.com'),
   openGraph: {
-    title: 'RR Studio Barbería | Cortes Profesionales',
-    description: 'Espacio dedicado al estilo masculino con servicios premium de barbería',
-    url: 'https://rrstudiobarbería.com',
+    title: 'RR Estudio | Peluquería y Barbería',
+    description: 'Espacio dedicado al estilo masculino con servicios premium de peluquería y barbería',
+    url: 'https://rrestudio.com',
     type: 'website',
     images: [{
       url: '/hero-bg.jpg',
       width: 1200,
       height: 630,
-      alt: 'RR Studio Barbería',
+      alt: 'RR Estudio - Peluquería y Barbería',
     }],
   },
   robots: {
     index: true,
     follow: true,
   },
-  applicationName: 'RR Studio Barbería',
-  authors: [{ name: 'RR Studio Barbería' }],
+  applicationName: 'RR Estudio',
+  authors: [{ name: 'RR Estudio' }],
   generator: 'v0.app',
-  creator: 'RR Studio Barbería',
+  creator: 'RR Estudio',
   icons: {
     icon: [
       {
@@ -63,8 +67,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#C9A45C' },
-    { media: '(prefers-color-scheme: dark)', color: '#C9A45C' },
+    { media: '(prefers-color-scheme: light)', color: '#C5A66B' },
+    { media: '(prefers-color-scheme: dark)', color: '#C5A66B' },
   ],
 }
 
@@ -75,7 +79,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${titilliumWeb.variable} ${rubik.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

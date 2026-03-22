@@ -11,16 +11,16 @@ export function CTA() {
             ¿Listo para renovar tu estilo?
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-10">
-            Reservá tu turno y viví la experiencia RR Studio.
+            Reservá tu turno y viví la experiencia RR Estudio.
           </p>
           <div className="flex justify-center">
             <Button 
               size="lg" 
               asChild 
-              className="text-base px-8 bg-[#071F15] hover:bg-[#0B3D26] text-[#F5F5F5] transition-colors duration-300"
+              className="text-base px-8 bg-[#141414] hover:bg-[#627435] text-[#F7F7F7] transition-colors duration-300"
             >
               <a 
-                href="https://wa.me/5493425765399?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Studio%20Barber%C3%ADa"
+                href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
                 target="_blank"
                 rel="noopener noreferrer"
               >

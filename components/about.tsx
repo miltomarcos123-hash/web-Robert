@@ -13,26 +13,26 @@ export function About() {
                 fill
                 className="object-cover"
               />
-              {/* Subtle green overlay to match brand */}
-              <div className="absolute inset-0 bg-[#071F15]/20 mix-blend-multiply" />
+              {/* Subtle green overlay to match brand - Brandbook */}
+              <div className="absolute inset-0 bg-[#627435]/20 mix-blend-multiply" />
             </div>
 
             <div>
               <p className="text-primary uppercase tracking-[0.3em] text-sm mb-4">
                 Nosotros
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-balance">
-                Sobre RR Studio Barbería
+              <h2 className="font-sans text-4xl md:text-5xl font-bold mb-8 text-balance">
+                Sobre RR Estudio
               </h2>
               <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  RR Studio Barbería nace con la visión de crear un espacio donde el estilo, la técnica y la experiencia se combinen para ofrecer un servicio de calidad.
+                  En RR Estudio no solo cortamos cabello, ofrecemos un espacio para recargar energías. Nos dedicamos a brindar una experiencia que va más allá de lo estético, enfocándonos en el bienestar integral de nuestros clientes.
                 </p>
                 <p>
-                  El estudio está dirigido por Robert Pergazere, barbero y educador dedicado a transmitir su conocimiento y experiencia en el mundo de la barbería.
+                  Creemos que cada visita es una oportunidad para desconectar del estrés diario y conectar con uno mismo. Ofrecemos un ambiente relajante, con atención personalizada, donde cada detalle está pensado para ofrecer confort y tranquilidad.
                 </p>
                 <p className="text-foreground font-medium">
-                  Hoy RR Studio es un lugar donde clientes y alumnos encuentran profesionalismo, estilo y una comunidad apasionada por este oficio.
+                  Nos comprometemos a usar productos de alta calidad y técnicas innovadoras que respeten la salud del cabello y la piel.
                 </p>
               </div>
             </div>
