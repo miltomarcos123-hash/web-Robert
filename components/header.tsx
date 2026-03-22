@@ -7,15 +7,10 @@ import { Button } from "@/components/ui/button"
 import { RRLogo } from "@/components/rr-logo"
 
 const navLinks = [
-  { href: "#inicio", label: "Inicio" },
   { href: "#servicios", label: "Servicios" },
   { href: "#academia", label: "Academia" },
-  { href: "#trabajos", label: "Trabajos" },
-  { href: "#domicilio", label: "Servicios a domicilio" },
   { href: "#productos", label: "Productos" },
-  { href: "#testimonios", label: "Testimonios" },
   { href: "#nosotros", label: "Nosotros" },
-  { href: "#contacto", label: "Contacto" },
 ]
 
 export function Header() {
