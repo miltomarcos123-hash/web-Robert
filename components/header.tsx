@@ -2,19 +2,21 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { RRLogo } from "@/components/rr-logo"
 
 const navLinks = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#academia", label: "Academia" },
-  { href: "#productos", label: "Productos" },
-  { href: "#nosotros", label: "Nosotros" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/academia", label: "Academia" },
+  { href: "/productos", label: "Productos" },
+  { href: "/nosotros", label: "Nosotros" },
 ]
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
@@ -38,17 +40,27 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs font-semibold uppercase tracking-wider text-foreground px-3 py-2 hover:text-primary transition-colors duration-300 relative group whitespace-nowrap"
+                className={`text-xs font-semibold uppercase tracking-wider px-3 py-2 transition-colors duration-300 relative group whitespace-nowrap ${
+                  pathname === link.href ? "text-primary" : "text-foreground hover:text-primary"
+                }`}
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                <span className={`absolute bottom-0 left-0 right-0 h-0.5 bg-primary transition-transform duration-300 origin-left ${
+                  pathname === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                }`}></span>
               </Link>
             ))}
           </nav>
 
           <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
             <Button asChild className="bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300 text-xs font-semibold px-6">
-              <Link href="#contacto">Reservar</Link>
+              <a 
+                href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Reservar
+              </a>
             </Button>
           </div>
 
@@ -70,14 +82,24 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary transition-colors duration-300 px-4 py-3 rounded-md hover:bg-secondary/20"
+                  className={`text-xs font-semibold uppercase tracking-wider transition-colors duration-300 px-4 py-3 rounded-md ${
+                    pathname === link.href 
+                      ? "text-primary bg-primary/10" 
+                      : "text-foreground hover:text-primary hover:bg-secondary/20"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
               <Button asChild className="mt-4 bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300 text-xs font-semibold mx-4">
-                <Link href="#contacto">Reservar Turno</Link>
+                <a 
+                  href="https://wa.me/543425106652?text=Hola%2C%20quiero%20reservar%20un%20turno%20en%20RR%20Estudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Reservar Turno
+                </a>
               </Button>
             </div>
           </nav>
