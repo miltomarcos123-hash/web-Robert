@@ -11,7 +11,10 @@ const navLinks = [
   { href: "#servicios", label: "Servicios" },
   { href: "#academia", label: "Academia" },
   { href: "#trabajos", label: "Trabajos" },
+  { href: "#domicilio", label: "Servicios a domicilio" },
   { href: "#productos", label: "Productos" },
+  { href: "#testimonios", label: "Testimonios" },
+  { href: "#nosotros", label: "Nosotros" },
   { href: "#contacto", label: "Contacto" },
 ]
 
@@ -22,9 +25,9 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <RRLogo size="sm" />
-            <div className="flex flex-col">
+            <div className="hidden sm:flex flex-col">
               <span className="font-sans text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
                 RR Estudio
               </span>
@@ -35,27 +38,28 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center px-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300"
+                className="text-xs font-semibold uppercase tracking-wider text-foreground px-3 py-2 hover:text-primary transition-colors duration-300 relative group whitespace-nowrap"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:block">
-            <Button asChild className="bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300">
-              <Link href="#contacto">Reservar Turno</Link>
+          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+            <Button asChild className="bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300 text-xs font-semibold px-6">
+              <Link href="#contacto">Reservar</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2 ml-4"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -65,19 +69,19 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <nav className="md:hidden py-6 border-t border-border/50">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden py-6 border-t border-border/50">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors duration-300 py-2"
+                  className="text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary transition-colors duration-300 px-4 py-3 rounded-md hover:bg-secondary/20"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-4 bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300">
+              <Button asChild className="mt-4 bg-primary hover:bg-accent text-primary-foreground transition-colors duration-300 text-xs font-semibold mx-4">
                 <Link href="#contacto">Reservar Turno</Link>
               </Button>
             </div>
