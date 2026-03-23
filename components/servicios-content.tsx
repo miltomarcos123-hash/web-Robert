@@ -77,6 +77,15 @@ const defaultZonas = [
   },
 ]
 
+const works = [
+  { id: 1, alt: "Fade moderno con diseño" },
+  { id: 2, alt: "Corte clásico con barba" },
+  { id: 3, alt: "Degradado con textura" },
+  { id: 4, alt: "Estilo contemporáneo" },
+  { id: 5, alt: "Barba perfilada" },
+  { id: 6, alt: "Corte ejecutivo" },
+]
+
 const testimonials = [
   {
     quote: "Excelente atención y profesionalismo. El mejor corte que me hicieron.",
