@@ -1,10 +1,20 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { createClient } from "@/lib/supabase/client"
 
-const productos = [
+interface Producto {
+  id: string
+  nombre: string
+  descripcion: string
+  precio: number
+  imagen_url?: string
+}
+
+const defaultProductos = [
   {
     id: '1',
     nombre: 'Pomada Premium RR',
@@ -64,6 +74,41 @@ const productos = [
 ]
 
 export function ProductosContent() {
+  const [productos, setProductos] = useState<any[]>(defaultProductos)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchProductos = async () => {
+      try {
+        const supabase = createClient()
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .order('created_at', { ascending: true })
+
+        if (error) {
+          console.error('Error fetching products:', error)
+          setProductos(defaultProductos)
+        } else if (data && data.length > 0) {
+          const formattedProductos = data.map((producto: any) => ({
+            id: producto.id,
+            nombre: producto.nombre,
+            descripcion: producto.descripcion,
+            precio: producto.precio,
+            imagen: producto.imagen_url || '/products/placeholder.jpg',
+          }))
+          setProductos(formattedProductos)
+        }
+      } catch (err) {
+        console.error('Error:', err)
+        setProductos(defaultProductos)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProductos()
+  }, [])
   return (
     <div className="pt-20">
       {/* Hero Section */}

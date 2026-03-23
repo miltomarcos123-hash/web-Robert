@@ -1,10 +1,27 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Scissors, Sparkles, Users, Palette, ArrowRight, MapPin, Clock, AlertCircle, Quote } from "lucide-react"
+import { createClient } from "@/lib/supabase/client"
 
-const services = [
+const iconMap: Record<string, any> = {
+  Scissors,
+  Sparkles,
+  Users,
+  Palette,
+}
+
+interface Service {
+  id: string
+  nombre: string
+  descripcion: string
+  precio: number
+  icon_name?: string
+}
+
+const defaultServices = [
   {
     icon: Scissors,
     title: "Corte clásico",
@@ -37,7 +54,7 @@ const services = [
   },
 ]
 
-const zonas = [
+const defaultZonas = [
   {
     nombre: 'Centro',
     descripcion: 'Zona centro de la ciudad',
@@ -60,15 +77,6 @@ const zonas = [
   },
 ]
 
-const works = [
-  { id: 1, alt: "Fade moderno con diseño" },
-  { id: 2, alt: "Corte clásico con barba" },
-  { id: 3, alt: "Degradado con textura" },
-  { id: 4, alt: "Estilo contemporáneo" },
-  { id: 5, alt: "Barba perfilada" },
-  { id: 6, alt: "Corte ejecutivo" },
-]
-
 const testimonials = [
   {
     quote: "Excelente atención y profesionalismo. El mejor corte que me hicieron.",
@@ -88,6 +96,41 @@ const testimonials = [
 ]
 
 export function ServiciosContent() {
+  const [services, setServices] = useState<any[]>(defaultServices)
+  const [zonas, setZonas] = useState(defaultZonas)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const supabase = createClient()
+        const { data, error } = await supabase
+          .from('services')
+          .select('*')
+          .order('created_at', { ascending: true })
+
+        if (error) {
+          console.error('Error fetching services:', error)
+          setServices(defaultServices)
+        } else if (data && data.length > 0) {
+          const formattedServices = data.map((service: any) => ({
+            icon: iconMap[service.icon_name] || Scissors,
+            title: service.nombre,
+            description: service.descripcion,
+            price: `$${service.precio.toLocaleString('es-AR')}`
+          }))
+          setServices(formattedServices)
+        }
+      } catch (err) {
+        console.error('Error:', err)
+        setServices(defaultServices)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchServices()
+  }, [])
   return (
     <div className="pt-20">
       {/* Hero Section */}
